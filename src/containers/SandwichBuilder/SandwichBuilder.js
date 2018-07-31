@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
-export default class PizzaBuilder extends Component {
+import Sandwich from '../../components/Sandwich/Sandwich';
+
+class SandwichBuilder extends Component {
   render() {
     return (
       <React.Fragment>
-        <div>Pizza</div>
+        <Sandwich />
         <div>Build Controls</div>
       </React.Fragment>
     );
   }
 }
+
+export default SandwichBuilder;

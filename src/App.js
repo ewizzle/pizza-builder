@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Layout from './hoc/Layout';
-import PizzaBuilder from './containers/PizzaBuilder/PizzaBuilder';
+import Layout from './hoc/Layout/Layout';
+import SandwichBuilder from './containers/SandwichBuilder/SandwichBuilder';
 
 class App extends Component {
   render() {
    return(
      <Layout>
       <div>Hello</div>
-      <PizzaBuilder />
+      <SandwichBuilder />
      </Layout>
    );
   }

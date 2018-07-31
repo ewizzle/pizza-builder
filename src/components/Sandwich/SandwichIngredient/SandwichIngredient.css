@@ -1,0 +1,58 @@
+.topBread {
+  height: 15%;
+  width: 85%;
+  background-color: #FBAE25;
+  border-radius: 35px 35px 10px 10px;
+  margin: 1% auto;
+}
+
+.bottomBread {
+  height: 16%;
+  width: 85%;
+  background-color: #FBAE25;
+  border-radius: 10px 10px 25px 25px;
+  margin: 1% auto;
+}
+
+.lettuce {
+  height: 4%;
+  width: 95%;
+  background: linear-gradient(#B1D45F, #70961D);
+  margin: 1% auto;
+  border-radius: 6px;
+}
+
+.beef {
+  height: 9%;
+  width: 90%;
+  margin: 1% auto;
+  background: linear-gradient(#4C2500, #814308);
+  border-radius: 10px;
+}
+
+.turkey {
+  height: 8%;
+  width: 90%;
+  margin: 1% auto;
+  background: linear-gradient(#EFCADC, #814308);
+  border-radius: 10px;
+}
+
+.tomato {
+  height: 5%;
+  width: 90%;
+  background: linear-gradient(#FF3939, #FF7575);
+  margin: 1% auto;
+  border-radius: 8px;
+}
+
+.cheese {
+  height: 4%;
+  width: 92%;
+  background: linear-gradient(#FFCB00, #FFD42C);
+  margin: 1% auto;
+  border-radius: 6px;
+}
+
+
+

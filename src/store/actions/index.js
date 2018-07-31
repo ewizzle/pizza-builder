@@ -1,6 +1,6 @@
 export {
-  addTopping,
-  removeTopping,
-  setToppings,
-  fetchToppingsFailed
-} from './pizzaBuilderAction';
+  addIngredient,
+  removeIngredient,
+  setIngredients,
+  fetchIngredientsFailed
+} from './sandwichBuilderAction';

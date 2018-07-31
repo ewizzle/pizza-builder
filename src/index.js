@@ -7,13 +7,13 @@ import createSagaMiddleware from 'redux-saga';
 
 import './index.css';
 import App from './App';
-import pizzaBuilderReducer from './store/reducers/pizzaBuilderReducer';
+import sandwichBuilderReducer from './store/reducers/sandwichBuilderReducer';
 import registerServiceWorker from './registerServiceWorker';
 
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
 
 const rootReducer = combineReducers({
-  pizzaBuilder: pizzaBuilderReducer
+  sandwichBuilder: sandwichBuilderReducer
 });
 
 const sagaMiddleware = createSagaMiddleware();
