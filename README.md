@@ -1,4 +1,4 @@
-You can build a pizza of your choice and place an order
+You can build a sandwich of your choice and place an order
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
