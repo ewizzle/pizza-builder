@@ -2,5 +2,6 @@ export {
   addIngredient,
   removeIngredient,
   setIngredients,
-  fetchIngredientsFailed
+  fetchIngredientsFailed,
+  ingredientsInitialize
 } from './sandwichBuilderAction';

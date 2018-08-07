@@ -27,3 +27,9 @@ export const fetchIngredientsFailed = (error) => {
     error
   };
 };
+
+export const ingredientsInitialize = () => {
+  return {
+    type: types.INGREDIENTS_INITIALIZE
+  };
+};

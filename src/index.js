@@ -4,6 +4,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import createSagaMiddleware from 'redux-saga';
+import { watchSandwichBuilder } from './store/sagas';
 
 import './index.css';
 import App from './App';
@@ -20,7 +21,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(sagaMiddleware)));
 
-// sagaMiddleware.run();
+sagaMiddleware.run(watchSandwichBuilder);
 
 const app = (
   <Provider store={store}>
