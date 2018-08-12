@@ -18,8 +18,12 @@ class SandwichBuilder extends Component {
   }
 
   purchaseHandler = () => {
-
+    this.setState({purchasing: true });
   }
+
+  purchaseCancelHandler = () => {
+    this.setState({ purchasing: false });
+  };
 
   render() {
     const disabledInfo = {
@@ -40,18 +44,20 @@ class SandwichBuilder extends Component {
           ingredientAdded={this.props.onIngredientAdd}
           ingredientRemoved={this.props.onIngredientRemove}
           disabled={disabledInfo}
-          price={this.props.price}/>
+          price={this.props.price}
+          ordered={this.purchaseHandler} />
         </React.Fragment>
       );
 
       orderSummary = <OrderSummary 
-        ingredients={this.props.ings} />;
+        ingredients={this.props.ings} 
+        purchaseCancelled={this.purchaseCancelHandler} />;
 
     }
     return (
       <React.Fragment>
-        <Modal>
-          {/* {orderSummary} */}
+        <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
+          {orderSummary}
         </Modal>
         {sandwich}  
       </React.Fragment>
