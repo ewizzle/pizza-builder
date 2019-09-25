@@ -1,15 +1,19 @@
-import React from 'react';
-import classes from './Layout.css';
+import React from "react";
+import styled from "styled-components";
 
-const Layout = (props) => {
-  return(
-    <React.Fragment>
+// import classes from './Layout.css';
+
+const StyledLayout = styled.div`
+  margin-top: 18px;
+`;
+
+const Layout = props => {
+  return (
+    <>
       <div>Toolbar, sidebar, backdrop</div>
-      <main className={classes.Content}>
-        {props.children}
-      </main>
-    </React.Fragment>
+      <StyledLayout>{props.children}</StyledLayout>
+    </>
   );
-};  
+};
 
 export default Layout;
