@@ -8,8 +8,6 @@ const StyledBuildControl = styled.div`
   margin: 5px auto;
 `;
 
-// import classes from './BuildControl.css';
-
 const BuildControl = props => (
   <StyledBuildControl>
     <div>{props.label}</div>

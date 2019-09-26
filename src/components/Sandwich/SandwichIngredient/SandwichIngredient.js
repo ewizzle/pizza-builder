@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-// import classes from './SandwichIngredient.css';
-
 const StyledSandwichIngredient = styled.div`
   .topBread {
     height: 15%;
@@ -68,37 +66,25 @@ class SandwichIngredient extends Component {
 
     switch (this.props.type) {
       case "top-bread":
-        ingredient = (
-          <StyledSandwichIngredient className="topBread"></StyledSandwichIngredient>
-        );
+        ingredient = <StyledSandwichIngredient className="topBread" />;
         break;
       case "bottom-bread":
-        ingredient = (
-          <StyledSandwichIngredient className="bottomBread"></StyledSandwichIngredient>
-        );
+        ingredient = <StyledSandwichIngredient className="bottomBread" />;
         break;
       case "cheese":
-        ingredient = (
-          <StyledSandwichIngredient className="cheese"></StyledSandwichIngredient>
-        );
+        ingredient = <StyledSandwichIngredient className="cheese" />;
         break;
       case "beef":
-        ingredient = (
-          <StyledSandwichIngredient className="beef"></StyledSandwichIngredient>
-        );
+        ingredient = <StyledSandwichIngredient className="beef" />;
         break;
       case "turkey":
-        ingredient = (
-          <StyledSandwichIngredient className="turkey"></StyledSandwichIngredient>
-        );
+        ingredient = <StyledSandwichIngredient className="turkey" />;
         break;
       case "lettuce":
-        ingredient = (
-          <StyledSandwichIngredient className="lettuce"></StyledSandwichIngredient>
-        );
+        ingredient = <StyledSandwichIngredient className="lettuce" />;
         break;
       case "tomato":
-        ingredient = <div className={classes.tomato}></div>;
+        ingredient = <StyledSandwichIngredient className="tomato" />;
         break;
       default:
         ingredient = null;

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-// import classes from "./Modal.css";
-
 import Backdrop from "../Backdrop/Backdrop";
 
 const StyledModal = styled.div`

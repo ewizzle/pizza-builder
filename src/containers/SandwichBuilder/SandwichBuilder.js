@@ -38,7 +38,7 @@ class SandwichBuilder extends Component {
 
     if (this.props.ings) {
       sandwich = (
-        <React.Fragment>
+        <>
           <Sandwich ingredients={this.props.ings} />
           <BuildControls
             ingredientAdded={this.props.onIngredientAdd}
@@ -47,7 +47,7 @@ class SandwichBuilder extends Component {
             price={this.props.price}
             ordered={this.purchaseHandler}
           />
-        </React.Fragment>
+        </>
       );
 
       orderSummary = (

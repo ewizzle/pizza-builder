@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import { Provider } from "react-redux";
-// import thunk from "redux-thunk";
+import thunk from "redux-thunk";
 
 import App from "../src/App";
 import sandwichBuilderReducer from "../src/store/reducers/sandwichBuilderReducer";
@@ -15,19 +15,14 @@ const rootReducer = combineReducers({
   sandwichBuilder: sandwichBuilderReducer
 });
 
-const store = createStore(
-  rootReducer
-  // composeEnhancers(applyMiddleware(thunk))
-);
-
-const app = (
-  <Provider store={store}>
-    <App />
-  </Provider>
-);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default class index extends Component {
   render() {
-    return app;
+    return (
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
   }
 }

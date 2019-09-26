@@ -11,8 +11,6 @@ const StyledBackdrop = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
-// import classes from './Backdrop.css';
-
 const backdrop = props =>
   props.show ? <StyledBackdrop onClick={props.clicked}></StyledBackdrop> : null;
 

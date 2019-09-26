@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// import classes from './Layout.css';
-
 const StyledLayout = styled.div`
   margin-top: 18px;
 `;

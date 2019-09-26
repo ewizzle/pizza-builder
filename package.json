@@ -4,6 +4,7 @@
   "description": "You can build a sandwich of your choice and place an order",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-core": "^6.26.3",
     "babel-plugin-styled-components": "^1.10.6",
     "next": "^9.0.6",
@@ -11,7 +12,9 @@
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
-    "styled-components": "^4.4.0"
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.4.0",
+    "webpack": "^4.41.0"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.2.0"

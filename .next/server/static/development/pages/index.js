@@ -226,13 +226,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _src_App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/App */ "./src/App.js");
-/* harmony import */ var _src_store_reducers_sandwichBuilderReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/store/reducers/sandwichBuilderReducer */ "./src/store/reducers/sandwichBuilderReducer.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _src_App__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/App */ "./src/App.js");
+/* harmony import */ var _src_store_reducers_sandwichBuilderReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/store/reducers/sandwichBuilderReducer */ "./src/store/reducers/sandwichBuilderReducer.js");
 var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
- // import thunk from "redux-thunk";
+
 
 
  // const composeEnhancers =
@@ -241,29 +243,25 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 //     : null || compose;
 
 const rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_1__["combineReducers"])({
-  sandwichBuilder: _src_store_reducers_sandwichBuilderReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
+  sandwichBuilder: _src_store_reducers_sandwichBuilderReducer__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
-const store = Object(redux__WEBPACK_IMPORTED_MODULE_1__["createStore"])(rootReducer // composeEnhancers(applyMiddleware(thunk))
-);
-
-const app = __jsx(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
-  store: store,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 24
-  },
-  __self: undefined
-}, __jsx(_src_App__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 25
-  },
-  __self: undefined
-}));
-
+const store = Object(redux__WEBPACK_IMPORTED_MODULE_1__["createStore"])(rootReducer, Object(redux__WEBPACK_IMPORTED_MODULE_1__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_3___default.a));
 class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
-    return app;
+    return __jsx(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
+      store: store,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, __jsx(_src_App__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }));
   }
 
 }
@@ -312,6 +310,25 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./src/axios-orders.js":
+/*!*****************************!*\
+  !*** ./src/axios-orders.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+const instance = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
+  baseURL: 'https://sandwich-builder.firebaseio.com/'
+});
+/* harmony default export */ __webpack_exports__["default"] = (instance);
+
+/***/ }),
+
 /***/ "./src/components/Sandwich/BuildControls/BuildControl/BuildControl.js":
 /*!****************************************************************************!*\
   !*** ./src/components/Sandwich/BuildControls/BuildControl/BuildControl.js ***!
@@ -332,25 +349,25 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledBuildControl = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "BuildControl__StyledBuildControl",
   componentId: "sc-1bnmzui-0"
-})(["display:flex;justify-content:space-between;align-items:center;margin:5px auto;"]); // import classes from './BuildControl.css';
+})(["display:flex;justify-content:space-between;align-items:center;margin:5px auto;"]);
 
 const BuildControl = props => __jsx(StyledBuildControl, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 14
+    lineNumber: 12
   },
   __self: undefined
 }, __jsx("div", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 15
+    lineNumber: 13
   },
   __self: undefined
 }, props.label), __jsx("button", {
   onClick: props.added,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 16
+    lineNumber: 14
   },
   __self: undefined
 }, "Add"), __jsx("button", {
@@ -358,7 +375,7 @@ const BuildControl = props => __jsx(StyledBuildControl, {
   disabled: props.disabled,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 17
+    lineNumber: 15
   },
   __self: undefined
 }, "Remove"));
@@ -384,10 +401,12 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/src/components/Sandwich/BuildControls/BuildControls.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
- // import classes from "./BuildControls.css";
 
 
-const StyledBuildControls = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div``;
+const StyledBuildControls = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "BuildControls__StyledBuildControls",
+  componentId: "sc-193qhml-0"
+})(["width:100%;background-color:#cf8f2e;display:flex;flex-flow:column;align-items:center;box-shadow:0 2px 1px #ccc;margin:auto;padding:10px 0;"]);
 const controls = [{
   label: "Beef",
   type: "beef"
@@ -408,13 +427,13 @@ const controls = [{
 const BuildControls = props => __jsx(StyledBuildControls, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 26
   },
   __self: undefined
 }, __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 27
   },
   __self: undefined
 }, "Price: $", props.price.toFixed(2)), controls.map(ctrl => __jsx(_BuildControl_BuildControl__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -425,13 +444,13 @@ const BuildControls = props => __jsx(StyledBuildControls, {
   disabled: props.disabled[ctrl.type],
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22
+    lineNumber: 29
   },
   __self: undefined
 })), __jsx("button", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 30
+    lineNumber: 37
   },
   __self: undefined
 }, "Order Now"));
@@ -536,33 +555,12 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/src/components/Sandwich/Sandwich.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
- // import classes from "./Sandwich.css";
 
 
-const StyledSandwich = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-  width: 100%;
-  margin: auto;
-  height: 250px;
-  overflow: scroll;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-
-  @media (min-width: 500px) and (min-height: 400px) {
-    width: 350px;
-    height: 300px;
-  }
-
-  @media (min-width: 500px) and (min-height: 401px) {
-    width: 450px;
-    height: 400px;
-  }
-
-  @media (min-width: 1000px) and (min-height: 700px) {
-    width: 700px;
-    height: 600px;
-  }
-`;
+const StyledSandwich = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "Sandwich__StyledSandwich",
+  componentId: "sc-1ap7ejq-0"
+})(["width:100%;margin:auto;height:250px;overflow:scroll;text-align:center;font-weight:bold;font-size:1.2rem;@media (min-width:500px) and (min-height:400px){width:350px;height:300px;}@media (min-width:500px) and (min-height:401px){width:450px;height:400px;}@media (min-width:1000px) and (min-height:700px){width:700px;height:600px;}"]);
 
 const sandwich = props => {
   console.log("this is before transformation ", props.ingredients);
@@ -574,7 +572,7 @@ const sandwich = props => {
         type: igKey,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 36
         },
         __self: undefined
       });
@@ -587,7 +585,7 @@ const sandwich = props => {
     transformedIngredients = __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 44
       },
       __self: undefined
     }, "Please start adding ingredients!");
@@ -597,21 +595,21 @@ const sandwich = props => {
   return __jsx(StyledSandwich, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx(_SandwichIngredient_SandwichIngredient__WEBPACK_IMPORTED_MODULE_3__["default"], {
     type: "top-bread",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 54
     },
     __self: undefined
   }), transformedIngredients, __jsx(_SandwichIngredient_SandwichIngredient__WEBPACK_IMPORTED_MODULE_3__["default"], {
     type: "bottom-bread",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 56
     },
     __self: undefined
   }));
@@ -640,65 +638,11 @@ var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/src/component
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
- // import classes from './SandwichIngredient.css';
 
-const StyledSandwichIngredient = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-  .topBread {
-    height: 15%;
-    width: 85%;
-    background-color: #fbae25;
-    border-radius: 35px 35px 10px 10px;
-    margin: 1% auto;
-  }
-
-  .bottomBread {
-    height: 16%;
-    width: 85%;
-    background-color: #fbae25;
-    border-radius: 10px 10px 25px 25px;
-    margin: 1% auto;
-  }
-
-  .lettuce {
-    height: 4%;
-    width: 95%;
-    background: linear-gradient(#b1d45f, #70961d);
-    margin: 1% auto;
-    border-radius: 6px;
-  }
-
-  .beef {
-    height: 9%;
-    width: 90%;
-    margin: 1% auto;
-    background: linear-gradient(#4c2500, #814308);
-    border-radius: 10px;
-  }
-
-  .turkey {
-    height: 8%;
-    width: 90%;
-    margin: 1% auto;
-    background: linear-gradient(#efcadc, #814308);
-    border-radius: 10px;
-  }
-
-  .tomato {
-    height: 5%;
-    width: 90%;
-    background: linear-gradient(#ff3939, #ff7575);
-    margin: 1% auto;
-    border-radius: 8px;
-  }
-
-  .cheese {
-    height: 4%;
-    width: 92%;
-    background: linear-gradient(#ffcb00, #ffd42c);
-    margin: 1% auto;
-    border-radius: 6px;
-  }
-`;
+const StyledSandwichIngredient = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SandwichIngredient__StyledSandwichIngredient",
+  componentId: "sc-452j8r-0"
+})([".topBread{height:15%;width:85%;background-color:#fbae25;border-radius:35px 35px 10px 10px;margin:1% auto;}.bottomBread{height:16%;width:85%;background-color:#fbae25;border-radius:10px 10px 25px 25px;margin:1% auto;}.lettuce{height:4%;width:95%;background:linear-gradient(#b1d45f,#70961d);margin:1% auto;border-radius:6px;}.beef{height:9%;width:90%;margin:1% auto;background:linear-gradient(#4c2500,#814308);border-radius:10px;}.turkey{height:8%;width:90%;margin:1% auto;background:linear-gradient(#efcadc,#814308);border-radius:10px;}.tomato{height:5%;width:90%;background:linear-gradient(#ff3939,#ff7575);margin:1% auto;border-radius:8px;}.cheese{height:4%;width:92%;background:linear-gradient(#ffcb00,#ffd42c);margin:1% auto;border-radius:6px;}"]);
 
 class SandwichIngredient extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
@@ -710,7 +654,7 @@ class SandwichIngredient extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
           className: "topBread",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 69
           },
           __self: this
         });
@@ -721,7 +665,7 @@ class SandwichIngredient extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
           className: "bottomBread",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 77
+            lineNumber: 72
           },
           __self: this
         });
@@ -732,7 +676,7 @@ class SandwichIngredient extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
           className: "cheese",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 82
+            lineNumber: 75
           },
           __self: this
         });
@@ -743,7 +687,7 @@ class SandwichIngredient extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
           className: "beef",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 87
+            lineNumber: 78
           },
           __self: this
         });
@@ -754,7 +698,7 @@ class SandwichIngredient extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
           className: "turkey",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92
+            lineNumber: 81
           },
           __self: this
         });
@@ -765,18 +709,18 @@ class SandwichIngredient extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
           className: "lettuce",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97
+            lineNumber: 84
           },
           __self: this
         });
         break;
 
       case "tomato":
-        ingredient = __jsx("div", {
-          className: classes.tomato,
+        ingredient = __jsx(StyledSandwichIngredient, {
+          className: "tomato",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 101
+            lineNumber: 87
           },
           __self: this
         });
@@ -818,13 +762,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const StyledBackdrop = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Backdrop__StyledBackdrop",
   componentId: "sc-1h4ilvj-0"
-})(["width:100%;height:100%;position:fixed;z-index:100;left:0;top:0;background-color:rgba(0,0,0,0.5);"]); // import classes from './Backdrop.css';
+})(["width:100%;height:100%;position:fixed;z-index:100;left:0;top:0;background-color:rgba(0,0,0,0.5);"]);
 
 const backdrop = props => props.show ? __jsx(StyledBackdrop, {
   onClick: props.clicked,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 17
+    lineNumber: 15
   },
   __self: undefined
 }) : null;
@@ -850,27 +794,12 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/src/components/UI/Modal/Modal.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
- // import classes from "./Modal.css";
 
 
-const StyledModal = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  position: fixed;
-  z-index: 500;
-  background-color: white;
-  width: 80%;
-  box-shadow: 1px 1px 1px black;
-  padding: 16px;
-  border: 1px solid #ccc;
-  left: 15%;
-  top: 30%;
-  box-sizing: border-box;
-  transition: all 0.3s ease-out;
-
-  @media (min-width: 600px) {
-    width: 500px;
-    left: calc(50% - 250px);
-  }
-`;
+const StyledModal = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Modal__StyledModal",
+  componentId: "sc-8fder1-0"
+})(["position:fixed;z-index:500;background-color:white;width:80%;box-shadow:1px 1px 1px black;padding:16px;border:1px solid #ccc;left:15%;top:30%;box-sizing:border-box;transition:all 0.3s ease-out;@media (min-width:600px){width:500px;left:calc(50% - 250px);}"]);
 
 class Modal extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   shouldComponentUpdate(nextProps, nextState) {
@@ -881,7 +810,7 @@ class Modal extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 35
       },
       __self: this
     }, __jsx(_Backdrop_Backdrop__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -889,7 +818,7 @@ class Modal extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       clicked: this.props.modalClosed,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 36
       },
       __self: this
     }), __jsx(StyledModal, {
@@ -899,7 +828,7 @@ class Modal extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 37
       },
       __self: this
     }, this.props.children));
@@ -1021,13 +950,7 @@ class SandwichBuilder extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
     let orderSummary = null;
 
     if (this.props.ings) {
-      sandwich = __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41
-        },
-        __self: this
-      }, __jsx(_components_Sandwich_Sandwich__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      sandwich = __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(_components_Sandwich_Sandwich__WEBPACK_IMPORTED_MODULE_5__["default"], {
         ingredients: this.props.ings,
         __source: {
           fileName: _jsxFileName,
@@ -1112,7 +1035,6 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/src/hoc/Layout/Layout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
- // import classes from './Layout.css';
 
 const StyledLayout = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Layout__StyledLayout",
@@ -1123,13 +1045,13 @@ const Layout = props => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     },
     __self: undefined
   }, "Toolbar, sidebar, backdrop"), __jsx(StyledLayout, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 12
     },
     __self: undefined
   }, props.children));
@@ -1218,6 +1140,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchIngredientsFailed", function() { return fetchIngredientsFailed; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ingredientsInitialize", function() { return ingredientsInitialize; });
 /* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actionTypes */ "./src/store/actions/actionTypes.js");
+/* harmony import */ var _axios_orders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../axios-orders */ "./src/axios-orders.js");
+
 
 const addIngredient = name => {
   return {
@@ -1244,8 +1168,12 @@ const fetchIngredientsFailed = error => {
   };
 };
 const ingredientsInitialize = () => {
-  return {
-    type: _actionTypes__WEBPACK_IMPORTED_MODULE_0__["INGREDIENTS_INITIALIZE"]
+  return dispatch => {
+    _axios_orders__WEBPACK_IMPORTED_MODULE_1__["default"].get("https://sandwich-builder.firebaseio.com/ingredients.json").then(response => {
+      dispatch(setIngredients(response.data));
+    }).catch(error => {
+      dispatch(fetchIngredientsFailed());
+    });
   };
 };
 
@@ -1360,6 +1288,17 @@ module.exports = __webpack_require__(/*! /Users/Taivnaa/Desktop/github/sandwich-
 
 /***/ }),
 
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+
 /***/ "core-js/library/fn/object/define-property":
 /*!************************************************************!*\
   !*** external "core-js/library/fn/object/define-property" ***!
@@ -1445,6 +1384,17 @@ module.exports = require("react-redux");
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
+
+/***/ }),
+
+/***/ "redux-thunk":
+/*!******************************!*\
+  !*** external "redux-thunk" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("redux-thunk");
 
 /***/ }),
 
