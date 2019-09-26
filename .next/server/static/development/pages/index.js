@@ -639,10 +639,34 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const StyledSandwichIngredient = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SandwichIngredient__StyledSandwichIngredient",
+const StyledTopBread = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SandwichIngredient__StyledTopBread",
   componentId: "sc-452j8r-0"
-})([".topBread{height:15%;width:85%;background-color:#fbae25;border-radius:35px 35px 10px 10px;margin:1% auto;}.bottomBread{height:16%;width:85%;background-color:#fbae25;border-radius:10px 10px 25px 25px;margin:1% auto;}.lettuce{height:4%;width:95%;background:linear-gradient(#b1d45f,#70961d);margin:1% auto;border-radius:6px;}.beef{height:9%;width:90%;margin:1% auto;background:linear-gradient(#4c2500,#814308);border-radius:10px;}.turkey{height:8%;width:90%;margin:1% auto;background:linear-gradient(#efcadc,#814308);border-radius:10px;}.tomato{height:5%;width:90%;background:linear-gradient(#ff3939,#ff7575);margin:1% auto;border-radius:8px;}.cheese{height:4%;width:92%;background:linear-gradient(#ffcb00,#ffd42c);margin:1% auto;border-radius:6px;}"]);
+})(["height:15%;width:85%;background-color:#fbae25;border-radius:35px 35px 10px 10px;margin:1% auto;"]);
+const StyledBottomBread = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SandwichIngredient__StyledBottomBread",
+  componentId: "sc-452j8r-1"
+})(["height:16%;width:85%;background-color:#fbae25;border-radius:10px 10px 25px 25px;margin:1% auto;"]);
+const StyledLettuce = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SandwichIngredient__StyledLettuce",
+  componentId: "sc-452j8r-2"
+})(["height:4%;width:95%;background:linear-gradient(#b1d45f,#70961d);margin:1% auto;border-radius:6px;"]);
+const StyledBeef = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SandwichIngredient__StyledBeef",
+  componentId: "sc-452j8r-3"
+})(["height:9%;width:90%;margin:1% auto;background:linear-gradient(#4c2500,#814308);border-radius:10px;"]);
+const StyledTurkey = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SandwichIngredient__StyledTurkey",
+  componentId: "sc-452j8r-4"
+})(["height:8%;width:90%;margin:1% auto;background:linear-gradient(#efcadc,#814308);border-radius:10px;"]);
+const StyledTomato = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SandwichIngredient__StyledTomato",
+  componentId: "sc-452j8r-5"
+})(["height:5%;width:90%;background:linear-gradient(#ff3939,#ff7575);margin:1% auto;border-radius:8px;"]);
+const StyledCheese = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SandwichIngredient__StyledCheese",
+  componentId: "sc-452j8r-6"
+})(["height:4%;width:92%;background:linear-gradient(#ffcb00,#ffd42c);margin:1% auto;border-radius:6px;"]);
 
 class SandwichIngredient extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
@@ -650,77 +674,70 @@ class SandwichIngredient extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
 
     switch (this.props.type) {
       case "top-bread":
-        ingredient = __jsx(StyledSandwichIngredient, {
-          className: "topBread",
+        ingredient = __jsx(StyledTopBread, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 67
           },
           __self: this
         });
         break;
 
       case "bottom-bread":
-        ingredient = __jsx(StyledSandwichIngredient, {
-          className: "bottomBread",
+        ingredient = __jsx(StyledBottomBread, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 70
           },
           __self: this
         });
         break;
 
       case "cheese":
-        ingredient = __jsx(StyledSandwichIngredient, {
-          className: "cheese",
+        ingredient = __jsx(StyledCheese, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 75
+            lineNumber: 73
           },
           __self: this
         });
         break;
 
       case "beef":
-        ingredient = __jsx(StyledSandwichIngredient, {
-          className: "beef",
+        ingredient = __jsx(StyledBeef, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 78
+            lineNumber: 76
           },
           __self: this
         });
         break;
 
       case "turkey":
-        ingredient = __jsx(StyledSandwichIngredient, {
-          className: "turkey",
+        ingredient = __jsx(StyledTurkey, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 79
           },
           __self: this
         });
         break;
 
       case "lettuce":
-        ingredient = __jsx(StyledSandwichIngredient, {
-          className: "lettuce",
+        ingredient = __jsx(StyledLettuce, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84
+            lineNumber: 82
           },
           __self: this
         });
         break;
 
       case "tomato":
-        ingredient = __jsx(StyledSandwichIngredient, {
-          className: "tomato",
+        ingredient = __jsx(StyledTomato, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 87
+            lineNumber: 85
           },
           __self: this
         });
