@@ -4,4 +4,6 @@ export {
   setIngredients,
   fetchIngredientsFailed,
   ingredientsInitialize
-} from './sandwichBuilderAction';
+} from "./sandwichBuilderAction";
+export { purchaseSandwich, purchaseInit, fetchOrders } from "./order";
+export { auth, logout, setAuthRedirectPath, authCheckState } from "./auth";

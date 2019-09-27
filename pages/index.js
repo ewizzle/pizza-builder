@@ -5,6 +5,8 @@ import thunk from "redux-thunk";
 
 import App from "../src/App";
 import sandwichBuilderReducer from "../src/store/reducers/sandwichBuilderReducer";
+import orderReducer from "../src/store/reducers/order";
+import authReducer from "../src/store/reducers/auth";
 
 // const composeEnhancers =
 //   process.env.NODE_ENV === "development"
@@ -12,7 +14,9 @@ import sandwichBuilderReducer from "../src/store/reducers/sandwichBuilderReducer
 //     : null || compose;
 
 const rootReducer = combineReducers({
-  sandwichBuilder: sandwichBuilderReducer
+  sandwichBuilder: sandwichBuilderReducer,
+  order: orderReducer,
+  auth: authReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
