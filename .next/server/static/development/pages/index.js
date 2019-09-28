@@ -1998,44 +1998,6 @@ const instance = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
 
 /***/ }),
 
-/***/ "./src/components/Logo/Logo.js":
-/*!*************************************!*\
-  !*** ./src/components/Logo/Logo.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/src/components/Logo/Logo.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
- // import Logo from "../../assets/images/logo.png";
-
-const StyledLogo = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
-  displayName: "Logo__StyledLogo",
-  componentId: "sc-6h23eo-0"
-})(["background-color:white;padding:8px;height:100%;box-sizing:border-box;border-radius:5px;img{height:100%;}"]);
-
-const logo = props => __jsx(StyledLogo, {
-  style: {
-    height: props.height
-  },
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17
-  },
-  __self: undefined
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (logo);
-
-/***/ }),
-
 /***/ "./src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js":
 /*!************************************************************************************!*\
   !*** ./src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js ***!
@@ -2095,9 +2057,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavigationItem/NavigationItem */ "./src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NavigationItem/NavigationItem */ "./src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js");
 var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/src/components/Navigation/NavigationItems/NavigationItems.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2109,36 +2074,35 @@ const StyledNavigationItems = styled_components__WEBPACK_IMPORTED_MODULE_1___def
 const navigationItems = props => __jsx(StyledNavigationItems, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
-  },
-  __self: undefined
-}, __jsx(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  link: "/",
-  exact: true,
-  __source: {
-    fileName: _jsxFileName,
     lineNumber: 22
   },
   __self: undefined
-}, "Sandwich Builder"), props.isAuthenticated ? __jsx(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  link: "/orders",
+}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: "/",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 23
+  },
+  __self: undefined
+}, "Build Sandwich"), props.isAuthenticated ? __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: "/orders",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 24
+  },
+  __self: undefined
+}, "Orders") : null, !props.isAuthenticated ? __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: "/auth",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 26
   },
   __self: undefined
-}, "Orders") : null, !props.isAuthenticated ? __jsx(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  link: "/auth",
+}, "Authenticate") : __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: "/logout",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
-  },
-  __self: undefined
-}, "Authenticate") : __jsx(_NavigationItem_NavigationItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  link: "/logout",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 28
   },
   __self: undefined
 }, "Logout"));
@@ -2213,62 +2177,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Logo_Logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Logo/Logo */ "./src/components/Logo/Logo.js");
-/* harmony import */ var _NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../NavigationItems/NavigationItems */ "./src/components/Navigation/NavigationItems/NavigationItems.js");
-/* harmony import */ var _UI_Backdrop_Backdrop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../UI/Backdrop/Backdrop */ "./src/components/UI/Backdrop/Backdrop.js");
+/* harmony import */ var _NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavigationItems/NavigationItems */ "./src/components/Navigation/NavigationItems/NavigationItems.js");
+/* harmony import */ var _UI_Backdrop_Backdrop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../UI/Backdrop/Backdrop */ "./src/components/UI/Backdrop/Backdrop.js");
 var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/src/components/Navigation/SideDrawer/SideDrawer.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-
+const StyledSideDrawer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "SideDrawer__StyledSideDrawer",
+  componentId: "sc-1jhn2gj-0"
+})([".SideDrawer{position:fixed;width:280px;max-width:70%;height:100%;left:0;top:0;z-index:200;background-color:white;padding:32px 16px;box-sizing:border-box;transition:transform 0.3s ease-out;}@media (min-width:500px){.SideDrawer{display:none;}}.Open{transform:translateX(0);}.Close{transform:translateX(-100%);}.Logo{height:11%;margin-bottom:32px;}"]);
 
 const sideDrawer = props => {
-  // let attachedClasses = [classes.SideDrawer, classes.Close];
-  // if (props.open) {
-  //   attachedClasses = [classes.SideDrawer, classes.Open];
-  // }
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_UI_Backdrop_Backdrop__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  let attachedClasses = ["SideDrawer", "Close"];
+
+  if (props.open) {
+    attachedClasses = ["SideDrawer", "Open"];
+  }
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_UI_Backdrop_Backdrop__WEBPACK_IMPORTED_MODULE_3__["default"], {
     show: props.open,
     clicked: props.closed,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 49
     },
     __self: undefined
-  }), __jsx("div", {
+  }), __jsx(StyledSideDrawer, {
     className: attachedClasses.join(" "),
     onClick: props.closed,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 50
     },
     __self: undefined
-  }, __jsx("div", {
-    className: classes.Logo,
+  }, __jsx("nav", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 54
     },
     __self: undefined
-  }, __jsx(_Logo_Logo__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: undefined
-  })), __jsx("nav", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
-  }, __jsx(_NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_2__["default"], {
     isAuthenticated: props.isAuth,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 55
     },
     __self: undefined
   }))));
@@ -2291,83 +2246,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Logo_Logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Logo/Logo */ "./src/components/Logo/Logo.js");
-/* harmony import */ var _NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../NavigationItems/NavigationItems */ "./src/components/Navigation/NavigationItems/NavigationItems.js");
-/* harmony import */ var _SideDrawer_DrawerToggle_DrawerToggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SideDrawer/DrawerToggle/DrawerToggle */ "./src/components/Navigation/SideDrawer/DrawerToggle/DrawerToggle.js");
+/* harmony import */ var _NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavigationItems/NavigationItems */ "./src/components/Navigation/NavigationItems/NavigationItems.js");
+/* harmony import */ var _SideDrawer_DrawerToggle_DrawerToggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../SideDrawer/DrawerToggle/DrawerToggle */ "./src/components/Navigation/SideDrawer/DrawerToggle/DrawerToggle.js");
 var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/src/components/Navigation/Toolbar/Toolbar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-
-const StyledToolbar = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header`
-  height: 56px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #703b09;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-  z-index: 90;
-
-  nav {
-    height: 100%;
-  }
-
-  .Logo {
-    height: 80%;
-  }
-
-  @media (max-width: 499px) {
-    .DesktopOnly {
-      display: none;
-    }
-  }
-`;
+const StyledToolbar = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header.withConfig({
+  displayName: "Toolbar__StyledToolbar",
+  componentId: "sc-15nfucj-0"
+})(["height:56px;width:100%;position:fixed;top:0;left:0;background-color:#703b09;display:flex;justify-content:space-between;align-items:center;padding:0 20px;box-sizing:border-box;z-index:90;nav{height:100%;}@media (max-width:499px){.DesktopOnly{display:none;}}"]);
 
 const toolbar = props => __jsx(StyledToolbar, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 38
+    lineNumber: 33
   },
   __self: undefined
-}, __jsx(_SideDrawer_DrawerToggle_DrawerToggle__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}, __jsx(_SideDrawer_DrawerToggle_DrawerToggle__WEBPACK_IMPORTED_MODULE_3__["default"], {
   clicked: props.drawerToggleClicked,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 39
+    lineNumber: 34
   },
   __self: undefined
-}), __jsx("div", {
-  className: "Logo",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 40
-  },
-  __self: undefined
-}, __jsx(_Logo_Logo__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 41
-  },
-  __self: undefined
-})), __jsx("nav", {
+}), __jsx("nav", {
   className: "DesktopOnly",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 43
+    lineNumber: 35
   },
   __self: undefined
-}, __jsx(_NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}, __jsx(_NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_2__["default"], {
   isAuthenticated: props.isAuth,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 44
+    lineNumber: 36
   },
   __self: undefined
 })));

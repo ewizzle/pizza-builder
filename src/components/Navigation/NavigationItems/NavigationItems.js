@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 import NavigationItem from "./NavigationItem/NavigationItem";
 
@@ -19,16 +20,12 @@ const StyledNavigationItems = styled.ul`
 
 const navigationItems = props => (
   <StyledNavigationItems>
-    <NavigationItem link="/" exact>
-      Sandwich Builder
-    </NavigationItem>
-    {props.isAuthenticated ? (
-      <NavigationItem link="/orders">Orders</NavigationItem>
-    ) : null}
+    <Link href="/">Build Sandwich</Link>
+    {props.isAuthenticated ? <Link href="/orders">Orders</Link> : null}
     {!props.isAuthenticated ? (
-      <NavigationItem link="/auth">Authenticate</NavigationItem>
+      <Link href="/auth">Authenticate</Link>
     ) : (
-      <NavigationItem link="/logout">Logout</NavigationItem>
+      <Link href="/logout">Logout</Link>
     )}
   </StyledNavigationItems>
 );

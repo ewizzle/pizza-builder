@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 
@@ -23,10 +22,6 @@ const StyledToolbar = styled.header`
     height: 100%;
   }
 
-  .Logo {
-    height: 80%;
-  }
-
   @media (max-width: 499px) {
     .DesktopOnly {
       display: none;
@@ -37,9 +32,6 @@ const StyledToolbar = styled.header`
 const toolbar = props => (
   <StyledToolbar>
     <DrawerToggle clicked={props.drawerToggleClicked} />
-    <div className="Logo">
-      <Logo />
-    </div>
     <nav className="DesktopOnly">
       <NavigationItems isAuthenticated={props.isAuth} />
     </nav>
