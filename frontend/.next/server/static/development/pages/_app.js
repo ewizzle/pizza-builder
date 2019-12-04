@@ -112,7 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nprogress */ "nprogress");
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/frontend/components/Header.js";
+var _jsxFileName = "/Users/Taivnaa/Desktop/github/pizza-builder/frontend/components/Header.js";
 
 
 
@@ -177,7 +177,7 @@ var Header = function Header() {
       lineNumber: 54
     },
     __self: this
-  }, "Pizzeria")))));
+  }, "Golden Gate Pizzeria")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -197,7 +197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/frontend/components/Meta.js";
+var _jsxFileName = "/Users/Taivnaa/Desktop/github/pizza-builder/frontend/components/Meta.js";
 
 
 
@@ -272,7 +272,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/frontend/components/Page.js";
+var _jsxFileName = "/Users/Taivnaa/Desktop/github/pizza-builder/frontend/components/Page.js";
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n  html {\n    box-sizing: border-box;\n    font-size: 12px;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  body {\n    padding: 0;\n    margin: 0;\n    font-size: 1.5rem;\n    line-height: 2;\n  }\n  a {\n    text-decoration: none;\n    color: ", "\n  }\n"]);
@@ -1615,7 +1615,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Taivnaa/Desktop/github/sandwich-builder/frontend/pages/_app.js";
+var _jsxFileName = "/Users/Taivnaa/Desktop/github/pizza-builder/frontend/pages/_app.js";
 
 
 

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import Footer from '../components/Footer';
+import Link from 'next/link';
 import Signup from '../components/Signup';
+import styled from 'styled-components';
 import Signin from '../components/Signin';
 
 const StyledPage = styled.div`
@@ -13,8 +13,29 @@ const Columns = styled.div`
   grid-gap: 10px;
 `;
 
+const StyledNav = styled.div`
+  text-align: center;
+  a {
+    align-content: center;
+    font-size: 24px;
+    :hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
+`;
+
+const Nav = () => (
+  <StyledNav>
+    <Link href='/'>
+      <a>Back to Home</a>
+    </Link>
+  </StyledNav>
+);
+
 const SignupPage = props => (
   <StyledPage>
+    <Nav />
     <Columns>
       <Signin />
       <Signup />
@@ -22,21 +43,4 @@ const SignupPage = props => (
   </StyledPage>
 );
 
-const StyledHome = styled.div`
-  .intro {
-    text-align: center;
-  }
-`;
-
-const HomePage = () => (
-  <StyledHome>
-    <div className='intro'>
-      <h1>Welcome</h1>
-      <h3>please signin or signup to place an order</h3>
-    </div>
-    <SignupPage />
-    <Footer />
-  </StyledHome>
-);
-
-export default HomePage;
+export default SignupPage;

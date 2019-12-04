@@ -6655,7 +6655,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      source_map_support_1.rewriteStacktrace(error, "/Users/Taivnaa/Desktop/github/sandwich-builder/frontend/.next");
+      source_map_support_1.rewriteStacktrace(error, "/Users/Taivnaa/Desktop/github/pizza-builder/frontend/.next");
       return error;
     }
   };

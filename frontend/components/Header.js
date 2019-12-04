@@ -51,7 +51,7 @@ const Header = () => (
     <div className='bar home'>
       <Logo>
         <Link href='/'>
-          <a>Pizzeria</a>
+          <a>Golden Gate Pizzeria</a>
         </Link>
       </Logo>
     </div>

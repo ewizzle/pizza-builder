@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import SandwichIngredient from "./SandwichIngredient/SandwichIngredient";
+import SandwichIngredient from './SandwichIngredient/SandwichIngredient';
 
 const StyledSandwich = styled.div`
   width: 100%;
@@ -29,7 +29,7 @@ const StyledSandwich = styled.div`
 `;
 
 const sandwich = props => {
-  console.log("this is before transformation ", props.ingredients);
+  console.log('this is before transformation ', props.ingredients);
   let transformedIngredients = Object.keys(props.ingredients)
     .map(igKey => {
       return [...Array(props.ingredients[igKey])].map((_, i) => {
@@ -45,15 +45,15 @@ const sandwich = props => {
   }
 
   console.log(
-    "this is inside sandwich js transformed one: ",
+    'this is inside sandwich js transformed one: ',
     transformedIngredients
   );
 
   return (
     <StyledSandwich>
-      <SandwichIngredient type="top-bread" />
+      <SandwichIngredient type='top-bread' />
       {transformedIngredients}
-      <SandwichIngredient type="bottom-bread" />
+      <SandwichIngredient type='bottom-bread' />
     </StyledSandwich>
   );
 };
