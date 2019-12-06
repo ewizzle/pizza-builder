@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import BuildControl from "./BuildControl/BuildControl";
+import BuildControl from './BuildControl/BuildControl';
 
 const StyledBuildControls = styled.div`
   width: 100%;
@@ -15,18 +15,18 @@ const StyledBuildControls = styled.div`
 `;
 
 const controls = [
-  { label: "Beef", type: "beef" },
-  { label: "Turkey", type: "turkey" },
-  { label: "Cheese", type: "cheese" },
-  { label: "Lettuce", type: "lettuce" },
-  { label: "Tomato", type: "tomato" }
+  { label: 'Beef', type: 'beef' },
+  { label: 'Turkey', type: 'turkey' },
+  { label: 'Cheese', type: 'cheese' },
+  { label: 'Lettuce', type: 'lettuce' },
+  { label: 'Tomato', type: 'tomato' }
 ];
 
 const BuildControls = props => (
   <StyledBuildControls>
     <p>Price: ${props.price.toFixed(2)}</p>
     {controls.map(ctrl => (
-      <BuildControl
+      <BuildControl2
         key={ctrl.label}
         label={ctrl.label}
         added={() => props.ingredientAdded(ctrl.type)}

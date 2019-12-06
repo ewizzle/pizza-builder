@@ -1,0 +1,83 @@
+{
+  "title": "Custom Pizza Builder",
+  "ingredients": [
+    {
+      "htmlname": "Base",
+      "title": "Base",
+      "price": 8.99,
+      "points": 4
+    },
+    {
+      "htmlname": "Tomatsauce",
+      "title": "Tomatsauce",
+      "price": 0.5,
+      "points": 5
+    },
+    {
+      "htmlname": "Cheese",
+      "title": "Cheese",
+      "price": 1.4,
+      "points": 15
+    },
+    {
+      "htmlname": "Bacon",
+      "title": "Bacon",
+      "price": 2.3,
+      "points": 10
+    },
+    {
+      "htmlname": "Pepperoni",
+      "title": "Pepperoni",
+      "price": 1.4,
+      "points": 10
+    },
+    {
+      "htmlname": "Mushrooms",
+      "title": "Mushrooms",
+      "price": 1.4,
+      "points": 2
+    },
+    {
+      "htmlname": "Onions",
+      "title": "Onions",
+      "price": 0.3,
+      "points": 5
+    },
+    {
+      "htmlname": "Chilli",
+      "title": "Chilli",
+      "price": 1.4,
+      "points": 10
+    },
+
+    {
+      "htmlname": "Olives",
+      "title": "Olives",
+      "price": 1.4,
+      "points": 5
+    },
+    {
+      "htmlname": "Shrimp",
+      "title": "Shrimp",
+      "price": 2,
+      "points": 7
+    },
+    {
+      "htmlname": "Pineapple",
+      "title": "Pineapple",
+      "price": 2.8,
+      "points": 1
+    }
+  ],
+  "rating": [
+    {
+      "message": "Come on, add more toppings"
+    },
+    {
+      "message": "This is ok, good pizza"
+    },
+    {
+      "message": "Wow great pizza!"
+    }
+  ]
+}
