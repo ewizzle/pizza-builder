@@ -7,8 +7,6 @@ import FinalPizza from './FinalPizza';
 import Ingredient from './Ingredient';
 import Pizza from './Pizza';
 import pizzaData from '../pizzadata.json';
-import Rating from './Rating';
-import IntroMessage from './Intro';
 
 const StyledPizza = styled.div`
   background: url(/bgtable.png);
@@ -18,10 +16,8 @@ const StyledPizza = styled.div`
 class PizzaBuilder extends Component {
   state = {
     selectedIngredients: [],
-    showIntroMessage: false,
-    showRating: false,
     showFinalPizza: { visibility: 'hidden', animationPlayState: 'paused' },
-    showCalculator: { visibility: 'visible' },
+    // showCalculator: { visibility: 'visible' },
     showPizza: { visibility: 'visible' }
   };
 
@@ -32,25 +28,15 @@ class PizzaBuilder extends Component {
     this.setState({ showIntroMessage: modalShow });
   };
   handleTryAgain = () => {
-    this.setState({ showRating: false, selectedIngredients: [] });
+    this.setState({ selectedIngredients: [] });
     this.refs.reset.handleIngredientsReset();
-  };
-  handleShowRating = () => {
-    this.setState({ showRating: true });
   };
   handleShowFinalPizza = () => {
     this.setState({
       showFinalPizza: { visibility: 'visible', animationPlayState: 'running' },
-      showCalculator: { visibility: 'hidden' },
-      showPizza: { visibility: 'hidden' },
-      showRating: false
+      // showCalculator: { visibility: 'hidden' },
+      showPizza: { visibility: 'hidden' }
     });
-  };
-
-  componentDidMount = () => {
-    setTimeout(() => {
-      this.setState({ showIntroMessage: true });
-    }, 3000);
   };
 
   render() {
@@ -61,19 +47,11 @@ class PizzaBuilder extends Component {
           selected={this.state.selectedIngredients}
           showFinalPizza={this.state.showFinalPizza}
         />
-        <Rating
+        {/* <Calculate
           pizzaData={pizzaData}
-          selected={this.state.selectedIngredients}
-          handleTryAgain={this.handleTryAgain}
-          handleShowRating={this.state.showRating}
-          handleFinalPizza={this.handleShowFinalPizza}
-        />
-        <Calculate
-          pizzaData={pizzaData}
-          handleShowRating={this.handleShowRating}
           selected={this.state.selectedIngredients}
           showCalculator={this.state.showCalculator}
-        />
+        /> */}
         <Container>
           <Row>
             <Col className='mb-2'>
@@ -95,20 +73,18 @@ class PizzaBuilder extends Component {
             <Col sm={5}>
               <div className='menu'>
                 <h3>Toppings:</h3>
-
                 <Ingredient
                   pizzaData={pizzaData}
                   handleIngredients={this.handleIngredients}
                   ref='reset'
                 />
+                <button onClick={this.handleShowFinalPizza}>
+                  Place the order
+                </button>
               </div>
             </Col>
           </Row>
         </Container>
-        {/* <IntroMessage
-          showIntroMessage={this.state.showIntroMessage}
-          handlemessage={this.handleIntroMessage}
-        /> */}
       </StyledPizza>
     );
   }

@@ -8,8 +8,8 @@
       "points": 4
     },
     {
-      "htmlname": "Tomatsauce",
-      "title": "Tomatsauce",
+      "htmlname": "Tomato-sauce",
+      "title": "Tomato-sauce",
       "price": 0.5,
       "points": 5
     },
@@ -32,14 +32,14 @@
       "points": 10
     },
     {
-      "htmlname": "Mushrooms",
-      "title": "Mushrooms",
+      "htmlname": "Mushroom",
+      "title": "Mushroom",
       "price": 1.4,
       "points": 2
     },
     {
-      "htmlname": "Onions",
-      "title": "Onions",
+      "htmlname": "Onion",
+      "title": "Onion",
       "price": 0.3,
       "points": 5
     },
@@ -51,8 +51,8 @@
     },
 
     {
-      "htmlname": "Olives",
-      "title": "Olives",
+      "htmlname": "Olive",
+      "title": "Olive",
       "price": 1.4,
       "points": 5
     },
@@ -67,17 +67,6 @@
       "title": "Pineapple",
       "price": 2.8,
       "points": 1
-    }
-  ],
-  "rating": [
-    {
-      "message": "Come on, add more toppings"
-    },
-    {
-      "message": "This is ok, good pizza"
-    },
-    {
-      "message": "Wow great pizza!"
     }
   ]
 }

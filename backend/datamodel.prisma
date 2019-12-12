@@ -10,13 +10,12 @@ type User {
 type Order {
   id: ID! @id
   user: User!
-  pizzas: [Pizza!]!
+  pizza: Pizza!
   price: Int
   createdAt: DateTime! @createdAt
 }
 
 type Pizza {
   id: ID! @id
-  size: String
   toppings: [String!]! @scalarList(strategy: RELATION)
 }

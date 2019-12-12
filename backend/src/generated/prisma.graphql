@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/enkhtaivan-bayasgalan-fcef3a/pizza-builder-backend/dev
-# timestamp: Wed Dec 04 2019 16:29:43 GMT-0800 (Pacific Standard Time)
+# timestamp: Fri Dec 06 2019 09:51:47 GMT-0800 (Pacific Standard Time)
 
 type AggregateOrder {
   count: Int!
@@ -62,7 +62,7 @@ interface Node {
 type Order implements Node {
   id: ID!
   user: User!
-  pizzas(where: PizzaWhereInput, orderBy: PizzaOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Pizza!]
+  pizza: Pizza!
   price: Int
   createdAt: DateTime!
 }
@@ -81,7 +81,7 @@ input OrderCreateInput {
   id: ID
   price: Int
   user: UserCreateOneInput!
-  pizzas: PizzaCreateManyInput
+  pizza: PizzaCreateOneInput!
 }
 
 """An edge in a connection."""
@@ -150,7 +150,7 @@ input OrderSubscriptionWhereInput {
 input OrderUpdateInput {
   price: Int
   user: UserUpdateOneRequiredInput
-  pizzas: PizzaUpdateManyInput
+  pizza: PizzaUpdateOneRequiredInput
 }
 
 input OrderUpdateManyMutationInput {
@@ -251,9 +251,7 @@ input OrderWhereInput {
   """All values greater than or equal the given value."""
   createdAt_gte: DateTime
   user: UserWhereInput
-  pizzas_every: PizzaWhereInput
-  pizzas_some: PizzaWhereInput
-  pizzas_none: PizzaWhereInput
+  pizza: PizzaWhereInput
 }
 
 input OrderWhereUniqueInput {
@@ -277,7 +275,6 @@ type PageInfo {
 
 type Pizza implements Node {
   id: ID!
-  size: String
   toppings: [String!]!
 }
 
@@ -293,13 +290,12 @@ type PizzaConnection {
 
 input PizzaCreateInput {
   id: ID
-  size: String
   toppings: PizzaCreatetoppingsInput
 }
 
-input PizzaCreateManyInput {
-  create: [PizzaCreateInput!]
-  connect: [PizzaWhereUniqueInput!]
+input PizzaCreateOneInput {
+  create: PizzaCreateInput
+  connect: PizzaWhereUniqueInput
 }
 
 input PizzaCreatetoppingsInput {
@@ -318,105 +314,11 @@ type PizzaEdge {
 enum PizzaOrderByInput {
   id_ASC
   id_DESC
-  size_ASC
-  size_DESC
 }
 
 type PizzaPreviousValues {
   id: ID!
-  size: String
   toppings: [String!]!
-}
-
-input PizzaScalarWhereInput {
-  """Logical AND on all given filters."""
-  AND: [PizzaScalarWhereInput!]
-
-  """Logical OR on all given filters."""
-  OR: [PizzaScalarWhereInput!]
-
-  """Logical NOT on all given filters combined by AND."""
-  NOT: [PizzaScalarWhereInput!]
-  id: ID
-
-  """All values that are not equal to given value."""
-  id_not: ID
-
-  """All values that are contained in given list."""
-  id_in: [ID!]
-
-  """All values that are not contained in given list."""
-  id_not_in: [ID!]
-
-  """All values less than the given value."""
-  id_lt: ID
-
-  """All values less than or equal the given value."""
-  id_lte: ID
-
-  """All values greater than the given value."""
-  id_gt: ID
-
-  """All values greater than or equal the given value."""
-  id_gte: ID
-
-  """All values containing the given string."""
-  id_contains: ID
-
-  """All values not containing the given string."""
-  id_not_contains: ID
-
-  """All values starting with the given string."""
-  id_starts_with: ID
-
-  """All values not starting with the given string."""
-  id_not_starts_with: ID
-
-  """All values ending with the given string."""
-  id_ends_with: ID
-
-  """All values not ending with the given string."""
-  id_not_ends_with: ID
-  size: String
-
-  """All values that are not equal to given value."""
-  size_not: String
-
-  """All values that are contained in given list."""
-  size_in: [String!]
-
-  """All values that are not contained in given list."""
-  size_not_in: [String!]
-
-  """All values less than the given value."""
-  size_lt: String
-
-  """All values less than or equal the given value."""
-  size_lte: String
-
-  """All values greater than the given value."""
-  size_gt: String
-
-  """All values greater than or equal the given value."""
-  size_gte: String
-
-  """All values containing the given string."""
-  size_contains: String
-
-  """All values not containing the given string."""
-  size_not_contains: String
-
-  """All values starting with the given string."""
-  size_starts_with: String
-
-  """All values not starting with the given string."""
-  size_not_starts_with: String
-
-  """All values ending with the given string."""
-  size_ends_with: String
-
-  """All values not ending with the given string."""
-  size_not_ends_with: String
 }
 
 type PizzaSubscriptionPayload {
@@ -459,53 +361,29 @@ input PizzaSubscriptionWhereInput {
 }
 
 input PizzaUpdateDataInput {
-  size: String
   toppings: PizzaUpdatetoppingsInput
 }
 
 input PizzaUpdateInput {
-  size: String
   toppings: PizzaUpdatetoppingsInput
-}
-
-input PizzaUpdateManyDataInput {
-  size: String
-  toppings: PizzaUpdatetoppingsInput
-}
-
-input PizzaUpdateManyInput {
-  create: [PizzaCreateInput!]
-  connect: [PizzaWhereUniqueInput!]
-  set: [PizzaWhereUniqueInput!]
-  disconnect: [PizzaWhereUniqueInput!]
-  delete: [PizzaWhereUniqueInput!]
-  update: [PizzaUpdateWithWhereUniqueNestedInput!]
-  updateMany: [PizzaUpdateManyWithWhereNestedInput!]
-  deleteMany: [PizzaScalarWhereInput!]
-  upsert: [PizzaUpsertWithWhereUniqueNestedInput!]
 }
 
 input PizzaUpdateManyMutationInput {
-  size: String
   toppings: PizzaUpdatetoppingsInput
 }
 
-input PizzaUpdateManyWithWhereNestedInput {
-  where: PizzaScalarWhereInput!
-  data: PizzaUpdateManyDataInput!
+input PizzaUpdateOneRequiredInput {
+  create: PizzaCreateInput
+  connect: PizzaWhereUniqueInput
+  update: PizzaUpdateDataInput
+  upsert: PizzaUpsertNestedInput
 }
 
 input PizzaUpdatetoppingsInput {
   set: [String!]
 }
 
-input PizzaUpdateWithWhereUniqueNestedInput {
-  where: PizzaWhereUniqueInput!
-  data: PizzaUpdateDataInput!
-}
-
-input PizzaUpsertWithWhereUniqueNestedInput {
-  where: PizzaWhereUniqueInput!
+input PizzaUpsertNestedInput {
   update: PizzaUpdateDataInput!
   create: PizzaCreateInput!
 }
@@ -559,46 +437,6 @@ input PizzaWhereInput {
 
   """All values not ending with the given string."""
   id_not_ends_with: ID
-  size: String
-
-  """All values that are not equal to given value."""
-  size_not: String
-
-  """All values that are contained in given list."""
-  size_in: [String!]
-
-  """All values that are not contained in given list."""
-  size_not_in: [String!]
-
-  """All values less than the given value."""
-  size_lt: String
-
-  """All values less than or equal the given value."""
-  size_lte: String
-
-  """All values greater than the given value."""
-  size_gt: String
-
-  """All values greater than or equal the given value."""
-  size_gte: String
-
-  """All values containing the given string."""
-  size_contains: String
-
-  """All values not containing the given string."""
-  size_not_contains: String
-
-  """All values starting with the given string."""
-  size_starts_with: String
-
-  """All values not starting with the given string."""
-  size_not_starts_with: String
-
-  """All values ending with the given string."""
-  size_ends_with: String
-
-  """All values not ending with the given string."""
-  size_not_ends_with: String
 }
 
 input PizzaWhereUniqueInput {

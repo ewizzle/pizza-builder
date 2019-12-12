@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import { Row, Col, Button } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -12,7 +12,7 @@ const SteelDeskWapper = styled.div`
     background: #333 url(/steel.jpg) no-repeat;
     position: absolute;
     width: 370px;
-    height: 800px;
+    height: 600px;
     left: 0px;
     top: 0px;
     z-index: 400;
@@ -53,7 +53,6 @@ const SteelDeskWapper = styled.div`
         position: absolute;
         left: 30px;
         top: 38px;
-
         .content {
           width: 240px;
           padding-left: 34px;
@@ -85,21 +84,15 @@ const SteelDeskWapper = styled.div`
         }
       }
     }
-    .btn-rating {
-      position: absolute;
-      top: 700px;
-      left: 60px;
-      padding: 10px 90px;
-    }
   }
 
   @keyframes steeldesk {
     0% {
-      opacity: 1;
-      left: -800px;
+      opacity: 0;
+      left: -600px;
     }
     100% {
-      left: 0px;
+      left: 0;
       opacity: 1;
     }
   }
@@ -139,15 +132,15 @@ class Calculator extends Component {
     );
   };
   receiptLength = () => {
-    let length = this.props.selected.length * this.state.ingredientHeight - 280;
+    let length = this.props.selected.length * this.state.ingredientHeight - 90;
     let style = {
       backgroundPosition: '0px ' + length + 'px'
     };
 
     return style;
   };
-  handleRating = e => {
-    this.props.handleShowRating();
+  handleServe = e => {
+    this.props.handleServe();
   };
 
   CalShowHideSteelDesk = () => {
@@ -181,20 +174,13 @@ class Calculator extends Component {
                 <Row>
                   <Col className='rheader'>receipt</Col>
                 </Row>
-                <Fragment>{this.listIngredients()}</Fragment>
-                <Fragment>{this.listTotalPrice()}</Fragment>
+                <>{this.listIngredients()}</>
+                <>{this.listTotalPrice()}</>
                 <Row>
                   <Col className='niceday'>have a nice day</Col>
                 </Row>
               </div>
             </div>
-            <Button
-              className='btn btn-rating'
-              variant='secondary'
-              onClick={this.handleRating}
-            >
-              Rating
-            </Button>
           </div>
         </div>
       </SteelDeskWapper>

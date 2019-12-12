@@ -5,8 +5,7 @@ import styled from 'styled-components';
 const StyledPizza = styled.div`
   .Pizza {
     height: 50vw;
-    width: 50vw;
-
+    width: 60vw;
     position: relative;
     .Base {
       position: absolute;
@@ -17,7 +16,7 @@ const StyledPizza = styled.div`
       width: 50vw;
       max-width: 590px;
       max-height: 571px;
-      left: -1200px;
+      left: -1000px;
       top: 0px;
       animation-name: onShovel;
       animation-duration: 1s;
@@ -40,9 +39,9 @@ const StyledPizza = styled.div`
       z-index: 1;
       background: url(/Shovel.png) no-repeat;
       background-size: contain;
-      height: 50vw;
+      height: 55vw;
       width: 1000px;
-      left: -2000px;
+      left: -1000px;
       animation-name: Shovel;
       animation-delay: 1s;
       animation-duration: 1s;
@@ -52,12 +51,12 @@ const StyledPizza = styled.div`
     @media (max-width: 1024px) {
       @keyframes Shovel {
         0% {
-          left: -2000px;
+          left: -1000px;
           top: 0px;
         }
         100% {
-          left: -36vw;
-          top: 0px;
+          left: -160px;
+          top: 0;
         }
       }
     }
@@ -65,11 +64,11 @@ const StyledPizza = styled.div`
     @media (max-width: 768px) {
       @keyframes Shovel {
         0% {
-          left: -2000px;
+          left: -1000px;
           top: 0px;
         }
         100% {
-          left: -32vw;
+          left: -160px;
           top: 0px;
         }
       }
@@ -82,7 +81,7 @@ const StyledPizza = styled.div`
           top: 0px;
         }
         100% {
-          left: -326px;
+          left: -180px;
           top: 0px;
         }
       }
@@ -94,7 +93,7 @@ const StyledPizza = styled.div`
         top: 0px;
       }
       100% {
-        left: 5vw;
+        left: 15vw;
         top: 0px;
       }
     }

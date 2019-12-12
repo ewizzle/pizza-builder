@@ -40,7 +40,7 @@ class Signin extends Component {
                 await signin();
                 this.setState({ name: '', email: '', password: '' });
                 if (!error) {
-                  Router.push('/index');
+                  Router.push('/pizza-builder');
                 }
               }}
             >

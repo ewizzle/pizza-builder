@@ -168,7 +168,7 @@ class Finalpizza extends Component {
               className='bannerbutton'
               onClick={this.tryAgain}
             >
-              Try again?
+              Order Again
             </Button>
           </div>
           <div className='pizzaholder'>

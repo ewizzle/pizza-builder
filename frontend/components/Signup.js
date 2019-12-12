@@ -45,7 +45,7 @@ class Signup extends Component {
                 await signup();
                 this.setState({ name: '', email: '', password: '' });
                 if (!error) {
-                  Router.push('/index');
+                  Router.push('/pizza-builder');
                 }
               }}
             >

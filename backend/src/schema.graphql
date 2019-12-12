@@ -1,17 +1,41 @@
 # import * from './generated/prisma.graphql'
 
+type SuccessMessage {
+  message: String
+}
+
 type User {
   id: ID!
   name: String!
   email: String!
   password: String!
+  orders: [Order]
 }
 
 type Mutation {
   signup(email: String!, password: String!, name: String!): User!
   signin(email: String!, password: String!): User!
+  signout: SuccessMessage
+  createOrder(token: String!): Order!
+  deleteOrder(id: ID!): Order
+  createPizza(toppings: [String]!): Pizza!
+  updatePizza(id: ID!, toppings: [String]!): Order
+  requestReset(email: String!): SuccessMessage
+  resetPassword(
+    resetToken: String!
+    password: String!
+    confirmPassword: String!
+  ): User!
 }
 
 type Query {
+  orders(
+    where: OrderWhereInput
+    orderBy: OrderOrderByInput
+    skip: Int
+    first: Int
+  ): [Order]!
+  order(id: ID!): Order!
+  ordersConnection(where: OrderWhereInput): OrderConnection!
   me: User
 }

@@ -21,7 +21,7 @@ const StyledIngredient = styled.div`
     .ingredients {
       padding-left: 57px;
       padding-right: 90px;
-      height: 600px;
+      height: 800px;
       font-family: 'Merienda', cursive;
     }
   }
@@ -156,8 +156,10 @@ class Ingredient extends Component {
   render() {
     return (
       <StyledIngredient>
-        <div className='ingredients'>
-          <div className='funkyradio'>{this.creatList()}</div>
+        <div className='menu'>
+          <div className='ingredients'>
+            <div className='funkyradio'>{this.creatList()}</div>
+          </div>
         </div>
       </StyledIngredient>
     );
