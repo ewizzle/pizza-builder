@@ -27,6 +27,9 @@ const StyledHome = styled.div`
   }
   img {
     border: 2px solid black;
+    height: 350px;
+    width: 90%;
+    object-fit: cover;
   }
 `;
 
@@ -34,12 +37,7 @@ const HomePage = () => (
   <StyledHome>
     <div className='intro'>
       <h1>Welcome</h1>
-      <img
-        src='/pizza-on-plate.jpg'
-        alt='picture of a pizza'
-        height='350px'
-        width='90%'
-      />
+      <img src='/pizza-on-plate.jpg' alt='picture of a pizza' />
       <h3>please signin or signup to place an order</h3>
     </div>
     <SignupPage />

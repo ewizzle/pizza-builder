@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const StyledPizza = styled.div`
   .Pizza {
     height: 50vw;
-    width: 60vw;
+    width: 50vw;
     position: relative;
     .Base {
       position: absolute;
@@ -16,7 +16,7 @@ const StyledPizza = styled.div`
       width: 50vw;
       max-width: 590px;
       max-height: 571px;
-      left: -1000px;
+      left: -1200px;
       top: 0px;
       animation-name: onShovel;
       animation-duration: 1s;
@@ -39,9 +39,9 @@ const StyledPizza = styled.div`
       z-index: 1;
       background: url(/Shovel.png) no-repeat;
       background-size: contain;
-      height: 55vw;
+      height: 50vw;
       width: 1000px;
-      left: -1000px;
+      left: -2000px;
       animation-name: Shovel;
       animation-delay: 1s;
       animation-duration: 1s;
@@ -51,11 +51,11 @@ const StyledPizza = styled.div`
     @media (max-width: 1024px) {
       @keyframes Shovel {
         0% {
-          left: -1000px;
+          left: -2000px;
           top: 0px;
         }
         100% {
-          left: -160px;
+          left: -36vw;
           top: 0;
         }
       }
@@ -64,11 +64,11 @@ const StyledPizza = styled.div`
     @media (max-width: 768px) {
       @keyframes Shovel {
         0% {
-          left: -1000px;
+          left: -2000px;
           top: 0px;
         }
         100% {
-          left: -160px;
+          left: -32vw;
           top: 0px;
         }
       }
@@ -81,7 +81,7 @@ const StyledPizza = styled.div`
           top: 0px;
         }
         100% {
-          left: -180px;
+          left: -326px;
           top: 0px;
         }
       }
@@ -93,7 +93,7 @@ const StyledPizza = styled.div`
         top: 0px;
       }
       100% {
-        left: 15vw;
+        left: 5vw;
         top: 0px;
       }
     }
@@ -121,7 +121,6 @@ class Pizza extends Component {
         }
         localLayer++;
       }
-
       return (
         <div
           className='ingredient'

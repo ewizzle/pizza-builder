@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React, { Component } from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import Signout from './Signout';
 
 import Calculate from './Calculator';
 import FinalPizza from './FinalPizza';
@@ -11,6 +11,10 @@ import pizzaData from '../pizzadata.json';
 const StyledPizza = styled.div`
   background: url(/bgtable.png);
   overflow: hidden;
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
 `;
 
 class PizzaBuilder extends Component {
@@ -52,39 +56,26 @@ class PizzaBuilder extends Component {
           selected={this.state.selectedIngredients}
           showCalculator={this.state.showCalculator}
         /> */}
-        <Container>
-          <Row>
-            <Col className='mb-2'>
-              <Image src='/Canopy.png' fluid />
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={7}>
-              <Row>
-                <Col>
-                  <Pizza
-                    pizzaData={pizzaData}
-                    selected={this.state.selectedIngredients}
-                    showPizza={this.state.showPizza}
-                  />
-                </Col>
-              </Row>
-            </Col>
-            <Col sm={5}>
-              <div className='menu'>
-                <h3>Toppings:</h3>
-                <Ingredient
-                  pizzaData={pizzaData}
-                  handleIngredients={this.handleIngredients}
-                  ref='reset'
-                />
-                <button onClick={this.handleShowFinalPizza}>
-                  Place the order
-                </button>
-              </div>
-            </Col>
-          </Row>
-        </Container>
+        <img src='/Canopy.png' />
+        <div className='container'>
+          <div>
+            <Pizza
+              pizzaData={pizzaData}
+              selected={this.state.selectedIngredients}
+              showPizza={this.state.showPizza}
+            />
+          </div>
+          <div className='menu'>
+            <h3>Toppings:</h3>
+            <Ingredient
+              pizzaData={pizzaData}
+              handleIngredients={this.handleIngredients}
+              ref='reset'
+            />
+            <button onClick={this.handleShowFinalPizza}>Place the order</button>
+          </div>
+        </div>
+        <Signout />
       </StyledPizza>
     );
   }
