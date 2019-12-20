@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Image, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const StyledFinalPizza = styled.div`
@@ -147,7 +146,7 @@ class Finalpizza extends Component {
       return (
         <div key={item.title}>
           <div>
-            <Image
+            <img
               className='layer'
               style={this.props.showFinalPizza}
               src={'/' + item.title + '.png'}
@@ -163,13 +162,9 @@ class Finalpizza extends Component {
         <div className='pizzafinal' style={this.props.showFinalPizza}>
           <div className='bannerholder' style={this.props.showFinalPizza}>
             <div className='banner'>Bon Appétit</div>
-            <Button
-              variant='secondary'
-              className='bannerbutton'
-              onClick={this.tryAgain}
-            >
+            <button className='bannerbutton' onClick={this.tryAgain}>
               Order Again
-            </Button>
+            </button>
           </div>
           <div className='pizzaholder'>
             <div className='pizzalayer'>{this.finalPizza()}</div>

@@ -6,7 +6,9 @@ import Signout from './Signout';
 
 const Nav = () => (
   <User>
-    {({ data }) => {
+    {({ loading, error, data }) => {
+      if (loading) return null;
+      if (error) return `Error: ${error}`;
       const me = data.me;
       return (
         <NavStyles>

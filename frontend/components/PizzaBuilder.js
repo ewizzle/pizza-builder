@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import React, { Component } from 'react';
 import Signout from './Signout';
 
-import Calculate from './Calculator';
 import FinalPizza from './FinalPizza';
 import Ingredient from './Ingredient';
 import Pizza from './Pizza';
@@ -21,7 +20,6 @@ class PizzaBuilder extends Component {
   state = {
     selectedIngredients: [],
     showFinalPizza: { visibility: 'hidden', animationPlayState: 'paused' },
-    // showCalculator: { visibility: 'visible' },
     showPizza: { visibility: 'visible' }
   };
 
@@ -38,7 +36,6 @@ class PizzaBuilder extends Component {
   handleShowFinalPizza = () => {
     this.setState({
       showFinalPizza: { visibility: 'visible', animationPlayState: 'running' },
-      // showCalculator: { visibility: 'hidden' },
       showPizza: { visibility: 'hidden' }
     });
   };
@@ -51,11 +48,6 @@ class PizzaBuilder extends Component {
           selected={this.state.selectedIngredients}
           showFinalPizza={this.state.showFinalPizza}
         />
-        {/* <Calculate
-          pizzaData={pizzaData}
-          selected={this.state.selectedIngredients}
-          showCalculator={this.state.showCalculator}
-        /> */}
         <img src='/Canopy.png' />
         <div className='container'>
           <div>
