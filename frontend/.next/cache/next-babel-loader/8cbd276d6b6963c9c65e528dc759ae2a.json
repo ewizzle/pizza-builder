@@ -1,0 +1,1 @@
+{"ast":null,"code":"// This is client side config only\nexport var devEndpoint = \"http://localhost:4444\";\nexport var prodEndpoint = \"https://pizzeria-yoga-prod.herokuapp.com\";","map":null,"metadata":{},"sourceType":"module"}
