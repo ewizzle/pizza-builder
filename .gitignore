@@ -4,3 +4,4 @@ node_modules/
 .next/
 .build/
 variables.envnode_modules
+backend/node_modules
