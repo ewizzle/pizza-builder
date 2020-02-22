@@ -5,7 +5,80 @@ import Signout from './Signout';
 import FinalPizza from './FinalPizza';
 import Ingredient from './Ingredient';
 import Pizza from './Pizza';
-import pizzaData from '../pizzadata.json';
+// import pizzaData from '../pizzadata.json';
+
+const pizzaData = {
+  title: 'Custom Pizza Builder',
+  ingredients: [
+    {
+      htmlname: 'Base',
+      title: 'Base',
+      price: 8.99,
+      points: 4
+    },
+    {
+      htmlname: 'Tomato-sauce',
+      title: 'Tomato-sauce',
+      price: 0.5,
+      points: 5
+    },
+    {
+      htmlname: 'Cheese',
+      title: 'Cheese',
+      price: 1.4,
+      points: 15
+    },
+    {
+      htmlname: 'Bacon',
+      title: 'Bacon',
+      price: 2.3,
+      points: 10
+    },
+    {
+      htmlname: 'Pepperoni',
+      title: 'Pepperoni',
+      price: 1.4,
+      points: 10
+    },
+    {
+      htmlname: 'Mushroom',
+      title: 'Mushroom',
+      price: 1.4,
+      points: 2
+    },
+    {
+      htmlname: 'Onion',
+      title: 'Onion',
+      price: 0.3,
+      points: 5
+    },
+    {
+      htmlname: 'Chilli',
+      title: 'Chilli',
+      price: 1.4,
+      points: 10
+    },
+
+    {
+      htmlname: 'Olive',
+      title: 'Olive',
+      price: 1.4,
+      points: 5
+    },
+    {
+      htmlname: 'Shrimp',
+      title: 'Shrimp',
+      price: 2,
+      points: 7
+    },
+    {
+      htmlname: 'Pineapple',
+      title: 'Pineapple',
+      price: 2.8,
+      points: 1
+    }
+  ]
+};
 
 const StyledPizza = styled.div`
   background: url(/bgtable.png);
