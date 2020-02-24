@@ -81,11 +81,30 @@ const pizzaData = {
 };
 
 const StyledPizza = styled.div`
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
   background: url(/bgtable.png);
   overflow: hidden;
   .container {
     display: flex;
     justify-content: space-around;
+  }
+  button {
+    width: 10vh;
+    height: 6vh;
+    background: #d4976a;
+    border-radius: 10px;
+    margin-top: 3vh;
+    font-size: 14px;
+    font-weight: bold;
+    :hover {
+      background: #804215;
+      color: white;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -138,9 +157,10 @@ class PizzaBuilder extends Component {
               ref='reset'
             />
             <button onClick={this.handleShowFinalPizza}>Place the order</button>
+            <br />
           </div>
+          <Signout />
         </div>
-        <Signout />
       </StyledPizza>
     );
   }
