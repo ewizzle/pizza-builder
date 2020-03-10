@@ -22,9 +22,8 @@ const About = () => (
   <StyledAbout>
     <p>
       Golden Gate Pizzeria is family operated business. We opened in 1987 and
-      our pizzas are made with fresh and organic ingredients. Order your
-      favorite pizza, pasta, salad, and more, all with the click of a button. We
-      accept orders online for pickup and delivery.
+      our pizzas are made with fresh and organic ingredients. Create your
+      favorite pizza using different flavors of toppings.
     </p>
   </StyledAbout>
 );
